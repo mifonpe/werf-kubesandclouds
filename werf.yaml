@@ -1,0 +1,9 @@
+project: k&c-project
+configVersion: 1
+deploy:
+  helmRelease: TEMPLATE
+  helmReleaseSlug: false
+  namespace: default
+---
+image: web-server
+dockerfile: Dockerfile
