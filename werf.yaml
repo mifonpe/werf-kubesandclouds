@@ -1,4 +1,4 @@
-project: k&c-project
+project: kyc-project
 configVersion: 1
 deploy:
   helmRelease: TEMPLATE
