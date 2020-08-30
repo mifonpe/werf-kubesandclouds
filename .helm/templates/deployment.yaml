@@ -16,13 +16,13 @@ spec:
     spec:
       containers:
       - name: web-server
-{{ werf_container_image . | indent 8 }}
+{{ tuple "werf-web" . | werf_container_image | indent 8 }}
         ports:
         - containerPort: 80
           name: http
           protocol: TCP
         env:
-{{ werf_container_env . | indent 8 }}
+{{ tuple "werf-web" . | werf_container_env . | indent 8 }}
 ---
 apiVersion: v1
 kind: Service
