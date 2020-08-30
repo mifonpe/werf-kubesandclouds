@@ -22,6 +22,10 @@ spec:
           name: http
           protocol: TCP
         env:
+        - name: HOSTNAME
+          value: {{ .Values.server.hostname }}
+        - name: USER
+          value: {{ .Values.server.user }}   
 {{ tuple "werf-web" . | werf_container_env | indent 8 }}
 ---
 apiVersion: v1
