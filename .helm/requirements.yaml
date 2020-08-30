@@ -1,4 +1,4 @@
 dependencies:
 - name: nginx-ingress
-  version: "latest"
+  version: "1.8.1"
   repository: "https://helm.nginx.com/stable"
