@@ -8,7 +8,7 @@ deploy:
 #image: web-server
 #dockerfile: Dockerfile
 
-image: web-server
+image: fontanillamiguel/werf-web
 from: nginx:latest
 
 ansible:
