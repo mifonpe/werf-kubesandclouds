@@ -1,7 +1,7 @@
 project: kyc-project
 configVersion: 1
 deploy:
-  helmRelease: TEMPLATE
+  helmRelease: werf-test
   helmReleaseSlug: false
   namespace: default
 ---
