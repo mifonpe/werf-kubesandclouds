@@ -33,7 +33,6 @@ git:
   
 docker:
   WORKDIR: /web
-  USER: nginx
   CMD: ["nginx", "-g", "daemon off;"]
   EXPOSE: '80'
   ENV:
