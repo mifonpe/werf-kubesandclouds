@@ -1,0 +1,4 @@
+dependencies:
+- name: nginx-ingress
+  version: "latest"
+  repository: "https://helm.nginx.com/stable"
