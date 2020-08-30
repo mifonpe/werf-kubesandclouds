@@ -11,21 +11,25 @@ deploy:
 image: web-server
 from: nginx:latest
 
-git:
-- add: /web
-  to: /usr/share/nginx/html
-  owner: nginx
-  
 ansible:
   install:
   - file:
       path: /usr/share/nginx/html
       state: directory
       mode: 0755
+  - file:
+      path: /web
+      state: directory
+      mode: 0755
       
-shell:
-  beforeInstall:
-  - mkdir /web
+git:
+- add: /web
+  to: /usr/share/nginx/html
+  owner: nginx
+      
+#shell:
+#  beforeInstall:
+#  - mkdir /web
   
 docker:
   WORKDIR: /web
