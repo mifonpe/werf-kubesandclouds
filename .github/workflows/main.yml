@@ -1,0 +1,20 @@
+name: Staging Deployment
+on:
+  push:
+    branches: [deploy]
+jobs:
+  converge:
+    name: Converge
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Converge
+        uses: werf/actions/converge@master
+        with:
+          env: staging
+          kube-config-base64-data: ${{ secrets.KUBE_CONFIG_BASE64_DATA }}
