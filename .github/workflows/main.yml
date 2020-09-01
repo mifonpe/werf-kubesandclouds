@@ -27,4 +27,5 @@ jobs:
         with:
           env: staging
           kube-config-base64-data: ${{ secrets.KUBE_CONFIG_BASE64_DATA }}
-          images-repo-docker-hub-token: ${{ secrets.DOCKERHUB_TOKEN }}
+        env:
+          WERF_REPO_DOCKER_HUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
