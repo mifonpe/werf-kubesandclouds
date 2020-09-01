@@ -13,6 +13,13 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Install werf CLI  
+        uses: werf/actions/install@master
+      
+      - name: Run werf commands
+        run: |
+          werf helm dependency build
+      
       - name: Converge
         uses: werf/actions/converge@master
         with:
