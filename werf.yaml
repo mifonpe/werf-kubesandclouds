@@ -13,14 +13,18 @@ from: nginx:latest
 
 ansible:
   install:
+
+  - debug:
+      msg: 'Start install'
   - file:
       path: /usr/share/nginx/html
-      state: directory
       mode: 0755
   - file:
       path: /web
       state: directory
       mode: 0755
+  - debug:
+      msg: 'End install'
       
 git:
 - add: /web
