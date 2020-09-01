@@ -27,3 +27,10 @@ jobs:
         with:
           env: staging
           kube-config-base64-data: ${{ secrets.KUBE_CONFIG_BASE64_DATA }}
+          
+      - name: Dismiss if failed
+        if: ${{ failure() }}
+        uses: werf/actions/dismiss@master
+        with:
+          env: staging
+          kube-config-base64-data: ${{ secrets.KUBE_CONFIG_BASE64_DATA }}
