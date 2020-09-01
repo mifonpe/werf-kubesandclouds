@@ -13,10 +13,10 @@ jobs:
         with:
           fetch-depth: 0
 
+
       - name: Install werf CLI  
         uses: werf/actions/install@master
         
-      
       - name: Run werf commands
         run: |
           werf helm repo init
@@ -27,3 +27,4 @@ jobs:
         with:
           env: staging
           kube-config-base64-data: ${{ secrets.KUBE_CONFIG_BASE64_DATA }}
+          images-repo-docker-hub-token: ${{ secrets.DOCKERHUB_TOKEN }}
