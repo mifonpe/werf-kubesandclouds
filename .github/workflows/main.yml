@@ -27,6 +27,7 @@ jobs:
         with:
           env: staging
           kube-config-base64-data: ${{ secrets.KUBE_CONFIG_BASE64_DATA }}
+          version: v1.2.4  
           
       - name: Dismiss if failed
         if: ${{ failure() }}
