@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: web-server
-{{ tuple "werf-web" . | werf_image | indent 8 }}
+        image: {{ tuple "werf-web" . | werf_image }}
         ports:
         - containerPort: 80
           name: http
