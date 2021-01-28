@@ -17,10 +17,10 @@ jobs:
       - name: Install werf CLI  
         uses: werf/actions/install@master
         
-      - name: Run werf commands
-        run: |
-          werf helm repo init
-          werf helm dependency build
+#      - name: Run werf commands
+#        run: |
+#          werf helm repo init
+#          werf helm dependency build
       
       - name: Converge
         uses: werf/actions/converge@master
